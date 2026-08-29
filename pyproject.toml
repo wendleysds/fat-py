@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fat-py"
+version = "0.1.0"
+description = "Lightweight Python library and CLI tool for managing FAT12/16/32 file systems and MBR/GPT partitions."
+readme = "README.md"
+authors = [
+    { name = "Wendley Santos" }
+]
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["fat", "fat32", "fat16", "fat12", "filesystem", "mbr", "gpt", "disk"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: System :: Filesystems",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+fat-py = "cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
